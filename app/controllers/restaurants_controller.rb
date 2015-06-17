@@ -24,18 +24,13 @@ class RestaurantsController < ApplicationController
   # POST /restaurants
   # POST /restaurants.json
   def create
-    @restaurant = Restaurant.create(params[:restaurant])
-    # @restaurant = Restaurant.new(restaurant_params)
-
-    # respond_to do |format|
-    #   if @restaurant.save
-    #     format.html { redirect_to @restaurant, notice: 'Restaurant was successfully created.' }
-    #     format.json { render :show, status: :created, location: @restaurant }
-    #   else
-    #     format.html { render :new }
-    #     format.json { render json: @restaurant.errors, status: :unprocessable_entity }
-    #   end
-    # end
+    @restaurant = Restaurant.create(restaurant_params)
+    
+    if @restaurant.save
+      redirect_to @restaurant
+    else
+      render :new
+    end
   end
 
   # PATCH/PUT /restaurants/1

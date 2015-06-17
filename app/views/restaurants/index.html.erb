@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Restaurants</h1>
+<h1>Restaurants</h1>
 
-<table class="table table-hover table-striped">
+<!-- <table class="table table-hover table-striped">
   <thead>
     <tr>
       <th></th>
@@ -15,20 +15,25 @@
   </thead>
 
   <tbody>
-    <% @restaurants.each do |restaurant| %>
+    <%# @restaurants.each do |restaurant| %>
       <tr>
-        <td><%= image_tag restaurant.image.thumb.url %></td>
-        <td><%= restaurant.name %></td>
-        <td><%= restaurant.address %></td>
-        <td><%= restaurant.phone %></td>
-        <td><%= restaurant.website %></td>
-        <td><%= link_to 'Show', restaurant, class: "btn btn-link" %></td>
-        <td><%= link_to 'Edit', edit_restaurant_path(restaurant), class: "btn btn-link" %></td>
-        <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
+        <td><%#= image_tag restaurant.image.thumb.url %></td>
+        <td><%#= restaurant.name %></td>
+        <td><%#= restaurant.address %></td>
+        <td><%#= restaurant.phone %></td>
+        <td><%#= restaurant.website %></td>
+        <td><%#= link_to 'Show', restaurant, class: "btn btn-link" %></td>
+        <td><%#= link_to 'Edit', edit_restaurant_path(restaurant), class: "btn btn-link" %></td>
+        <td><%#= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
       </tr>
-    <% end %>
+    <%# end %>
   </tbody>
-</table>
+</table> -->
+
+<div id="restaurants">
+  <%= render @restaurants %>
+</div>
+<div class="clear"></div>
 
 <%= form_for Restaurant.new do |f| %>
   <%= f.label :image, "Upload restaurants:" %>
