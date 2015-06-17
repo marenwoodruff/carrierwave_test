@@ -1,0 +1,5 @@
+<% if @restaurant.new_record? %>
+  alert("Failed to upload restaurant: <%= j @restaurant.errors.full_messages.join(', ').html_safe %>");
+<% else %>
+  $("#restaurants").append("<%= j render(@restaurant) %>");
+<% end %>
