@@ -2,9 +2,10 @@
 
 <h1>Listing Restaurants</h1>
 
-<table class="table table-hover">
+<table class="table table-hover table-striped">
   <thead>
     <tr>
+      <th></th>
       <th>Name</th>
       <th>Address</th>
       <th>Phone</th>
@@ -16,6 +17,7 @@
   <tbody>
     <% @restaurants.each do |restaurant| %>
       <tr>
+        <td><%= image_tag restaurant.image.thumb.url %></td>
         <td><%= restaurant.name %></td>
         <td><%= restaurant.address %></td>
         <td><%= restaurant.phone %></td>
