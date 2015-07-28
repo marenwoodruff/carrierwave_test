@@ -14,12 +14,25 @@
  *= require_self
  */
 
-/*body {
-	text-align: center;
-}*/
+@import url(http://fonts.googleapis.com/css?family=Palanquin:200,400|Lobster);
+
+body {
+	/*text-align: center;*/
+  font-family: Helvetica, sans-serif;
+  color: #5e5e5e;
+}
+
+.navbar-collapse {
+  margin: 5px 0;
+}
 
 .navbar-default {
 	background: #959fcc;
+}
+
+.navbar-brand {
+  font-family: 'Lobster', cursive;
+  font-size: 1.5em;
 }
 
 .jumbotron {
@@ -27,6 +40,7 @@
   border: 1px solid #dadeed;
   text-align: center;
   h2 {
+    font-family: 'Lobster', cursive;
   	font-weight: bold;
   }
 }
@@ -34,4 +48,8 @@
 .alert, .notice {
 	margin: 0px;
 	padding: 0px;
+  text-align: center;
+  background: #cc9999;
+  font-size: 1.2em;
 }
+
