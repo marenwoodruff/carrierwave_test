@@ -18,3 +18,4 @@
 
 # Ignore application configuration
 /config/application.yml
+app_env_variables.rb
