@@ -19,13 +19,19 @@
 }*/
 
 .navbar-default {
-	background: #e1e7fd;
+	background: #959fcc;
 }
 
 .jumbotron {
-  background: #fdf7e1;
-  border: 1px solid #f2cb3b;
+  background: #c9cee5;
+  border: 1px solid #dadeed;
+  text-align: center;
   h2 {
   	font-weight: bold;
   }
+}
+
+.alert, .notice {
+	margin: 0px;
+	padding: 0px;
 }
