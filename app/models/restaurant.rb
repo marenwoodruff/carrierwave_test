@@ -1,5 +1,6 @@
 class Restaurant < ActiveRecord::Base
 	mount_uploader :image, ImageUploader
+	has_many :reviews
 
 	before_create :default_name
 
