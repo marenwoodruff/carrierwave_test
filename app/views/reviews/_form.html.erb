@@ -1,6 +1,6 @@
 <%= form_for([@restaurant, @review]) do |f| %>
   <% if @review.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-danger alert-dismissable">
       <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
 
       <ul>
