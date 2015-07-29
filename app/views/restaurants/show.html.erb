@@ -31,8 +31,19 @@
      <% else %>
 			<h3>Reviews</h3>
 			<% @reviews.each do |review| %>
-			  <p><%= review.rating %> <%= review.comment %></p>
+			  <div class="star-rating" data-score= <%= review.rating %>></div>
+			  <p><%= review.comment %></p>
 			<% end %>
 		<% end %>
 	</div>
 </div>
+
+<script>
+  $('.star-rating').raty({
+  	path: 'https://s3-us-west-2.amazonaws.com/restaurantreviews/stars',
+  	readOnly: true,
+  	score: function() {
+	    return $(this).attr('data-score');
+	  }
+  });
+</script>
