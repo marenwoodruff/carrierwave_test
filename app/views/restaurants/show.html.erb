@@ -2,10 +2,9 @@
 	<div class="col-md-6 col-md-offset-3 center">
 		<%= link_to image_tag(@restaurant.image.detail.url.to_s), @restaurant.image.detail.url %>
 
-		<p>
-		  <strong>Name:</strong>
+		<h1>
 		  <%= @restaurant.name %>
-		</p>
+		</h1>
 
 		<p>
 		  <strong>Address:</strong>
@@ -19,11 +18,21 @@
 
 		<p>
 		  <strong>Website:</strong>
-		  <%= @restaurant.website %>
+		  <%= link_to @restaurant.website, @restaurant.website if @restaurant.website %>
 		</p>
 
-		<%= link_to 'Write a Review', new_restaurant_review_path(@restaurant), class: "btn btn-primary" %><br />
+		<%= link_to 'Write a Review', new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+		<br />
 		<%= link_to 'Edit', edit_restaurant_path(@restaurant), class: "btn btn-link" %> |
 		<%= link_to 'Home', restaurants_path, class: "btn btn-link" %>
+
+		<% if @reviews.blank? %>
+      <h3>No reviews yet. Be the first to write one!</h3>
+     <% else %>
+			<h3>Reviews</h3>
+			<% @reviews.each do |review| %>
+			  <p><%= review.rating %> <%= review.comment %></p>
+			<% end %>
+		<% end %>
 	</div>
 </div>

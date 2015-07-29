@@ -60,8 +60,8 @@ class ReviewsController < ApplicationController
       @review = Review.find(params[:id])
     end
 
-    def set_review
-      @restaurant = Restaurant.find(params[:id])
+    def set_restaurant
+      @restaurant = Restaurant.find(params[:restaurant_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
