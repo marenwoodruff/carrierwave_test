@@ -45,7 +45,7 @@ body {
   }
 }
 
-.alert {
+.alert, .notice {
 	margin: 0px;
 	padding: 0px;
   text-align: center;
@@ -54,3 +54,6 @@ body {
   font-size: 1.2em;
 }
 
+.center {
+  text-align: center;
+}
