@@ -1,8 +1,10 @@
 <div class="restaurant">
   <%= link_to image_tag(restaurant.image_url(:thumb)), restaurant if restaurant.image? %>
-  <div class="name"><%= restaurant.name %></div>
+  <div class="name"><%= link_to restaurant.name, restaurant %></div>
   <div class="actions">
-    <%= link_to "edit", edit_restaurant_path(restaurant) %> |
-    <%= link_to "remove", restaurant, :confirm => 'Are you sure?', :method => :delete %>
+  	<% if user_signed_in? && current_user.admin? %>
+	    <%= link_to "edit", edit_restaurant_path(restaurant) %> |
+	    <%= link_to "remove", restaurant, :confirm => 'Are you sure?', :method => :delete %>
+    <% end %>
   </div>
 </div>

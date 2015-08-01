@@ -17,11 +17,12 @@
 @import "jquery.fileupload";
 @import "jquery.fileupload-ui";
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 @import url(http://fonts.googleapis.com/css?family=Palanquin:200,400|Lobster);
 
 body {
 	/*text-align: center;*/
-  font-family: Helvetica, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #5e5e5e;
 }
 
