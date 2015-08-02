@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
   devise_for :users
+  
+  # collection is used because there is more than one restaurant.  Otherwise, we would just use member
   resources :restaurants do
+    collection do
+      get 'search'
+    end
     resources :reviews, except: [:show, :index]
   end
 

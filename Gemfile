@@ -61,3 +61,5 @@ gem 'fog'
 gem "figaro"
 
 gem 'devise'
+gem 'searchkick'
+
